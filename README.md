@@ -1,2 +1,2 @@
 # junho-vermelho
-Site informativo sobre o junho vermelho (doação de sangue)
+Site informativo sobre a campanha junho vermelho (doação de sangue) criado em Python
