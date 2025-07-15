@@ -29,8 +29,6 @@ HTML5: Para a estruturação semântica do conteúdo.
 
 CSS3: Para a estilização, animações e design responsivo.
 
-JavaScript (Vanilla): Para a interatividade, manipulação do DOM e consumo da API do back-end em tempo real (fetch).
-
 Back-end (Lógica do Servidor):
 
 Python 3: Linguagem principal para toda a lógica da aplicação.
