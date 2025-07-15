@@ -59,19 +59,18 @@ Passo a Passo para a Instalação
 Clone o repositório: Abra seu terminal e execute o seguinte comando para criar uma cópia local do projeto.
 
 Bash
-
 git clone https://github.com/Oliver4i2/seu-repositorio-aqui.git
+
 Substitua a URL pela URL real do seu repositório no GitHub.
 
 Acesse a pasta do projeto:
 
 Bash
-
 cd nome-da-pasta-do-projeto
+
 Instale as dependências Python: Este comando usa o pip para ler o arquivo requirements.txt e instalar todas as bibliotecas necessárias (Flask, etc.).
 
 Bash
-
 # No Windows
 py -m pip install -r requirements.txt
 
