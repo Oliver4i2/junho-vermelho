@@ -10,6 +10,7 @@ Além de sua causa social, este trabalho representa o **projeto final da discipl
 
 ### 📜 Sobre a Campanha
 
+
 O "Junho Vermelho" foi criado para reforçar a importância da doação de sangue, um gesto simples que pode salvar até quatro vidas. A campanha é intensificada em junho para celebrar o **Dia Mundial do Doador de Sangue** (14 de junho) e para ajudar a manter os estoques dos hemocentros em níveis seguros, especialmente durante o inverno, quando as doações tendem a diminuir..
 
 ### ✨ Funcionalidades
@@ -142,6 +143,26 @@ junho-vermelho/
 |-- requirements.txt   # Dependências do Python
 `-- README.md          # Este arquivo de documentação
 ```
+
+-----
+
+Arquitetura do Projeto (MVC)
+
+<img width="2048" height="2048" alt="MVC" src="https://github.com/user-attachments/assets/0e4c7935-07cc-488a-886e-c5b1b813cbd6" />
+**Imagem gerada por IA** Este diagrama ilustra a arquitetura Model-View-Controller (MVC) adotada no Projeto Junho Vermelho. Ele demonstra a separação de responsabilidades: a View (páginas HTML, CSS e JavaScript) apresenta a informação ao usuário, o Controller (Python com Flask) recebe as requisições do usuário e interage com o Model, que representa os dados e a lógica de acesso ao banco de dados MySQL. As setas indicam o fluxo de informações entre essas camadas.
+
+-----
+Diagrama Entidade-Relacional (DER)
+
+<img width="2048" height="2048" alt="DER" src="https://github.com/user-attachments/assets/2d9afe23-7ce6-42bd-870e-e1aeca28cc2e" />
+**Imagem gerada por IA** Este Diagrama de Entidade-Relacional (DER) representa a estrutura do banco de dados do Projeto Junho Vermelho. Ele detalha as três tabelas principais: usuarios, comentarios e estoque_sanguineo. Cada tabela é mostrada com seus atributos (campos), com as chaves primárias (PK) e chaves estrangeiras (FK) claramente identificadas. A linha conectando usuarios e comentarios com a notação '1-N' indica que um usuário pode ter múltiplos comentários (relação de um para muitos).
+
+-----
+
+Diagrama de Caso de Uso
+
+<img width="2048" height="2048" alt="CDU" src="https://github.com/user-attachments/assets/40c82d88-304a-4770-a991-84f56f0d489e" />
+**Imagem gerada por IA** Este Diagrama de Caso de Uso descreve as interações entre os atores (Visitante e Usuário Autenticado) e as funcionalidades (Casos de Uso) do Projeto Junho Vermelho. Um 'Visitante' pode consultar o estoque de sangue e ler os comentários. Para realizar ações como publicar comentários, é necessário que o usuário realize o 'Login' ou 'Cadastro', tornando-se um 'Usuário Autenticado' com acesso a mais funcionalidades.
 
 -----
 
