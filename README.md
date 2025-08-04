@@ -1,9 +1,4 @@
 ![junho-vermelho](https://github.com/user-attachments/assets/568f363f-a7d4-4f77-95e7-3d8d6e76fd4d)
-Com certeza\! Um bom `README.md` é a porta de entrada do seu projeto.
-
-Refiz o `README.md` usando o excelente modelo que você enviou como base, mas atualizando cada seção para refletir com **precisão** o estado final do nosso projeto "Junho Vermelho", com todas as suas tecnologias e funcionalidades.
-
-Ele está pronto para você copiar e colar em um arquivo `README.md` na pasta raiz do seu projeto no GitHub.
 
 -----
 
