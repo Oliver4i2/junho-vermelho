@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junho Vermelho - Doe Sangue, Salve Vidas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="borda-laco borda-topo"></div>
+    <div class="borda-laco borda-inferior"></div>
+    <div class="borda-laco borda-esquerda"></div>
+    <div class="borda-laco borda-direita"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="#" class="nav-logo" aria-label="Página Inicial"><i class="fas fa-ribbon"></i></a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#doar-df" class="nav-link">Doar no DF</a></li>
+                    <li><a href="#pode-doar" class="nav-link">Requisitos</a></li>
+                    <li><a href="#como-doar" class="nav-link">Como Doar</a></li>
+                    <li><a href="#estatisticas" class="nav-link">Estatísticas</a></li>
+                    <li><a href="#outros-hemocentros" class="nav-link">Outros Estados</a></li>
+                    <li id="user-info" class="hidden"><span id="welcome-message"></span></li>
+                    <li id="login-li"><a href="login.html" id="login-btn" class="nav-button">Login / Cadastrar</a></li>
+                    <li id="logout-li" class="hidden"><a href="#" id="logout-btn" class="nav-button">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container header-content">
+            <i class="fas fa-heartbeat header-icon"></i>
+            <h1>Junho Vermelho</h1>
+            <p>Um pequeno gesto que representa um ato gigante de amor ao próximo.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="sobre">
+                <h2>O que é o Junho Vermelho e qual seu objetivo?</h2>
+                <p>O "Junho Vermelho" é uma campanha nacional que busca conscientizar e incentivar a população sobre a importância da doação de sangue. Criada em 2015, a iniciativa ganha força neste mês por conta do <strong>Dia Mundial do Doador de Sangue</strong>, celebrado em 14 de junho. O principal objetivo é manter os estoques de sangue em níveis seguros, especialmente durante o inverno e as férias, períodos em que as doações costumam diminuir.</p>
+            </section>
+            
+            <section id="doar-df">
+                <h2><i class="fas fa-map-marker-alt"></i> Como Doar no Distrito Federal</h2>
+                <p>No Distrito Federal, a doação de sangue é centralizada na <strong>Fundação Hemocentro de Brasília</strong>. É fundamental que os doadores façam o agendamento prévio para garantir um atendimento mais rápido e seguro.</p>
+                
+                <div class="info-box monitor-estoque">
+                    <h4><i class="fas fa-satellite-dish"></i> Estoque de Sangue (em tempo real)</h4>
+                    <div class="estoque-grid" id="estoque-grid-container"><p>Carregando dados do estoque...</p></div>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-calendar-check"></i> Agendamento Obrigatório</h3>
+                    <ul>
+                        <li><strong>Online:</strong> <a href="http://www.hemocentro.df.gov.br/" target="_blank">Site Oficial do Hemocentro</a></li>
+                        <li><strong>Telefone:</strong> 160 (opção 2) ou (61) 3327-4447</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-bus-alt"></i> Transporte Gratuito: Rota da Vida</h3>
+                    <ul>
+                        <li><strong>Horários de Saída (da Rodoviária para o Hemocentro):</strong> 8h, 9h, 10h, 12h30 e 13h30.</li>
+                        <li><strong>Horários de Retorno (do Hemocentro para a Rodoviária):</strong> 11h30 e 15h.</li>
+                        <li><strong>Local de Embarque:</strong> Plataforma inferior da Rodoviária do Plano Piloto, na baia de embarque da linha 110.</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-clinic-medical"></i> Endereço e Funcionamento</h3>
+                    <ul>
+                        <li><strong>Local:</strong> Setor Médico Hospitalar Norte (SMHN), Quadra 03, Conjunto A, Bloco 03 - Asa Norte, Brasília/DF.</li>
+                        <li><strong>Horário de Doação:</strong> Todos os dias, das 7h18 às 18h (inclusive sábados, domingos e feriados).</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-comments"></i> Experiências no Hemocentro</h3>
+                    <div id="comment-form-container" class="hidden">
+                        <form id="comment-form">
+                            <textarea id="comment-text" placeholder="Deixe aqui sua experiência ou mensagem de incentivo..." required></textarea>
+                            <button type="submit">Publicar Comentário</button>
+                        </form>
+                    </div>
+                    <div id="login-prompt">
+                        <p>Para deixar um comentário, <a href="login.html">faça o login ou cadastre-se</a>.</p>
+                    </div>
+                    <div id="comments-list"><p>Carregando comentários...</p></div>
+                </div>
+            </section>
+
+            <div class="cards-container">
+                <section class="card" id="pode-doar">
+                    <h3><i class="fas fa-check-circle"></i> Quem Pode Doar?</h3>
+                    <ul>
+                        <li>Ter entre 16 e 69 anos (menores de 18 precisam de autorização).</li>
+                        <li>Pesar no mínimo 50 kg.</li>
+                        <li>Estar em boas condições de saúde.</li>
+                        <li>Apresentar documento oficial com foto.</li>
+                        <li>Ter dormido pelo menos 6 horas na noite anterior.</li>
+                        <li>Estar bem alimentado, evitando alimentos gordurosos.</li>
+                    </ul>
+                </section>
+                <section class="card" id="nao-pode-doar">
+                    <h3><i class="fas fa-times-circle"></i> Quem NÃO Pode Doar?</h3>
+                    <ul>
+                        <li>Quem teve hepatite após os 11 anos.</li>
+                        <li>Pessoas com doenças transmissíveis pelo sangue (HIV, Hepatite B/C, etc.).</li>
+                        <li>Usuários de drogas ilícitas injetáveis.</li>
+                        <li>Mulheres grávidas ou amamentando.</li>
+                        <li>Pessoas que fizeram tatuagem ou piercing há menos de 6-12 meses.</li>
+                        <li>Estar gripado ou com febre no dia da doação.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <section id="como-doar">
+                <h2><i class="fas fa-hand-holding-heart"></i> O Passo a Passo da Doação</h2>
+                <ol>
+                    <li><strong>Agendamento:</strong> Primeiro, agende sua doação online ou por telefone.</li>
+                    <li><strong>Cadastro e Triagem:</strong> No Hemocentro, apresente seu documento...</li>
+                    <li><strong>Coleta:</strong> O procedimento é rápido e seguro...</li>
+                    <li><strong>Repouso e Lanche:</strong> Após a doação, você receberá um lanche...</li>
+                </ol>
+            </section>
+
+            <section id="estatisticas">
+                <h2><i class="fas fa-chart-bar"></i> Estatísticas no Brasil</h2>
+                <p>Entender os números da doação de sangue no país nos ajuda a compreender a importância de cada doador.</p>
+                <div class="stats-container">
+                    <div class="stat-card"><i class="fas fa-users"></i><h3>1,6%</h3><p>da população doa sangue.</p></div>
+                    <div class="stat-card"><i class="fas fa-tint"></i><h3>14</h3><p>doadores a cada mil habitantes.</p></div>
+                    <div class="stat-card"><i class="fas fa-heart-pulse"></i><h3>+3,2 milhões</h3><p>de bolsas coletadas por ano.</p></div>
+                </div>
+                <div class="fonte-info"><p><strong>Fonte:</strong> Ministério da Saúde (Dados de 2023). <a href="https://www.gov.br/saude/pt-br/assuntos/noticias" target="_blank">Saiba mais</a>.</p></div>
+            </section>
+
+            <section id="outros-hemocentros">
+                <h2><i class="fas fa-globe-americas"></i> Onde Doar em Outros Estados</h2>
+                <p>A necessidade de sangue é constante em todo o Brasil. Encontre o hemocentro mais próximo de você.</p>
+                <div class="hemocentro-grid">
+                    <div class="hemocentro-card"><img src="imagens/prosangue.png" alt="Logo Pró-Sangue"><h3>Pró-Sangue</h3><p>São Paulo (SP)</p><a href="https://www.prosangue.sp.gov.br/" class="btn-hemocentro" target="_blank">Visitar Site</a></div>
+                    <div class="hemocentro-card"><img src="imagens/hemorio.png" alt="Logo Hemorio"><h3>Hemorio</h3><p>Rio de Janeiro (RJ)</p><a href="http://www.hemorio.rj.gov.br/" class="btn-hemocentro" target="_blank">Visitar Site</a></div>
+                    <div class="hemocentro-card"><img src="imagens/hemominas.png" alt="Logo Hemominas"><h3>Hemominas</h3><p>Minas Gerais (MG)</p><a href="https://www.hemominas.mg.gov.br/" class="btn-hemocentro" target="_blank">Visitar Site</a></div>
+                    <div class="hemocentro-card"><img src="imagens/hemope.png" alt="Logo Hemope"><h3>Hemope</h3><p>Pernambuco (PE)</p><a href="https://www.hemope.pe.gov.br/" class="btn-hemocentro" target="_blank">Visitar Site</a></div>
+                    <div class="hemocentro-card"><img src="imagens/hemosc.png" alt="Logo Hemosc"><h3>Hemosc</h3><p>Santa Catarina (SC)</p><a href="https://www.hemosc.org.br/" class="btn-hemocentro" target="_blank">Visitar Site</a></div>
+                    <div class="hemocentro-card"><img src="imagens/hemoam.png" alt="Logo Hemoam"><h3>Hemoam</h3><p>Amazonas (AM)</p><a href="https://www.hemoam.am.gov.br/" class="btn-hemocentro" target="_blank">Visitar Site</a></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Doe Sangue. Doe Vida. Transforme o mundo de alguém.</p>
+            <p>&copy; 2025 - Campanha Junho Vermelho</p>
+            <p>&copy; Desenvolvido por <a href="https://github.com/Oliver4i2" target="_blank">Pedro Oliveira</a> TDS IFB</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seletores de elementos
+            const menuToggle = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = document.querySelectorAll('.nav-menu a.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Lógica do Menu Hamburger
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('is-active');
+                navMenu.classList.toggle('active');
+            });
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) {
+                        menuToggle.classList.remove('is-active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+
+            // Lógica de Scrollspy para o menu
+            const highlightMenu = () => {
+                let scrollY = window.pageYOffset;
+                let currentSectionId = null;
+                sections.forEach(current => {
+                    const sectionTop = current.offsetTop - 80;
+                    const sectionHeight = current.offsetHeight;
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        currentSectionId = current.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active-link');
+                    const linkHrefId = link.getAttribute('href').substring(1);
+                    if (linkHrefId === currentSectionId) { link.classList.add('active-link'); }
+                    if (linkHrefId === 'pode-doar' && currentSectionId === 'nao-pode-doar') {
+                        link.classList.add('active-link');
+                    }
+                });
+            };
+            window.addEventListener('scroll', highlightMenu);
+            
+            // Lógica de Login/Logout e Comentários
+            const loginLi = document.getElementById('login-li');
+            const logoutLi = document.getElementById('logout-li');
+            const userInfo = document.getElementById('user-info');
+            const welcomeMessage = document.getElementById('welcome-message');
+            const commentFormContainer = document.getElementById('comment-form-container');
+            const loginPrompt = document.getElementById('login-prompt');
+            const commentForm = document.getElementById('comment-form');
+            const commentsList = document.getElementById('comments-list');
+
+            function updateUIAfterLogin(userData) {
+                loginLi.classList.add('hidden');
+                welcomeMessage.textContent = `Olá, ${userData.nome}!`;
+                userInfo.classList.remove('hidden');
+                logoutLi.classList.remove('hidden');
+                commentFormContainer.classList.remove('hidden');
+                loginPrompt.classList.add('hidden');
+            }
+
+            function updateUIAfterLogout() {
+                loginLi.classList.remove('hidden');
+                userInfo.classList.add('hidden');
+                logoutLi.classList.add('hidden');
+                commentFormContainer.classList.add('hidden');
+                loginPrompt.classList.remove('hidden');
+            }
+
+            document.getElementById('logout-btn').addEventListener('click', async (e) => {
+                e.preventDefault();
+                await fetch('http://127.0.0.1:5000/api/logout', { method: 'POST', credentials: 'include' });
+                updateUIAfterLogout();
+            });
+
+            async function fetchAndDisplayComments() {
+                try {
+                    const response = await fetch('http://127.0.0.1:5000/api/comments');
+                    const comments = await response.json();
+                    commentsList.innerHTML = '';
+                    if (comments && comments.length > 0) {
+                        comments.forEach(comment => {
+                            const commentEl = document.createElement('div');
+                            commentEl.className = 'comment-item';
+                            const postDate = new Date(comment.data_postagem).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                            commentEl.innerHTML = `<div class="comment-header"><span class="comment-author">${comment.nome_usuario}</span><span class="comment-date">${postDate}</span></div><p class="comment-body">${comment.comentario_texto}</p>`;
+                            commentsList.appendChild(commentEl);
+                        });
+                    } else {
+                        commentsList.innerHTML = '<p>Ainda não há comentários. Seja o primeiro!</p>';
+                    }
+                } catch (error) {
+                    commentsList.innerHTML = '<p>Não foi possível carregar os comentários.</p>';
+                }
+            }
+
+            commentForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const commentText = document.getElementById('comment-text');
+                const comentario_texto = commentText.value;
+                if (!comentario_texto.trim()) return;
+                const response = await fetch('http://127.0.0.1:5000/api/comments', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ comentario_texto })
+                });
+                if (response.ok) {
+                    commentText.value = '';
+                    fetchAndDisplayComments();
+                } else {
+                    alert('Sua sessão pode ter expirado. Por favor, faça o login novamente.');
+                    window.location.href = 'login.html';
+                }
+            });
+            
+            async function buscarDadosEstoque() {
+                const container = document.getElementById('estoque-grid-container');
+                try {
+                    const response = await fetch('http://127.0.0.1:5000/api/estoque');
+                    if (!response.ok) throw new Error(`Erro de rede! Status: ${response.status}`);
+                    const estoque = await response.json();
+                    container.innerHTML = '';
+                    if (!estoque || estoque.length === 0) {
+                        container.innerHTML = '<p>Nenhum dado de estoque foi retornado.</p>';
+                        return;
+                    }
+                    const ESTOQUE_MAXIMO = 100, NIVEL_CRITICO = 20, NIVEL_ESTAVEL = 60;
+                    estoque.forEach((item, index) => {
+                        const div = document.createElement('div');
+                        div.className = 'estoque-item';
+                        if (item.quantidade_bolsas <= NIVEL_CRITICO) div.classList.add('estoque-critico');
+                        else if (item.quantidade_bolsas <= NIVEL_ESTAVEL) div.classList.add('estoque-estavel');
+                        else div.classList.add('estoque-seguro');
+                        const nivelPreenchimento = Math.min(1, item.quantidade_bolsas / ESTOQUE_MAXIMO);
+                        const alturaPreenchimento = nivelPreenchimento * 40;
+                        div.innerHTML = `<div class="bolsa-sangue-container"><svg class="bolsa-sangue-svg" viewBox="0 0 20 25" preserveAspectRatio="xMidYMid meet"><path class="bolsa-contorno" d="M5 2 L15 2 L18 8 L18 23 L2 23 L2 8 Z M10 0 L10 2" /><rect class="sangue-preenchimento" x="3" y="${23 - alturaPreenchimento}" width="14" height="${alturaPreenchimento}" /></svg></div><strong>${item.tipo_sanguineo}</strong><span>${item.quantidade_bolsas} bolsas</span>`;
+                        container.appendChild(div);
+                        setTimeout(() => div.classList.add('visible'), index * 100);
+                    });
+                } catch (error) {
+                    container.innerHTML = `<p style="color: red;"><strong>Erro ao carregar dados.</strong> Verifique se o servidor Python (app.py) está rodando.</p>`;
+                }
+            }
+
+            // INICIALIZAÇÃO GERAL DA PÁGINA
+            (async () => {
+                const response = await fetch('http://127.0.0.1:5000/api/check_session', { credentials: 'include' });
+                const data = await response.json();
+                if (data.logado) {
+                    updateUIAfterLogin(data.usuario);
+                } else {
+                    updateUIAfterLogout();
+                }
+            })();
+            
+            fetchAndDisplayComments();
+            buscarDadosEstoque();
+            highlightMenu();
+        });
+    </script>
+</body>
+</html>
