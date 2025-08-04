@@ -6,9 +6,11 @@
 
 Este projeto é uma aplicação web completa e interativa, desenvolvida em apoio à campanha **Junho Vermelho**, o mês de conscientização sobre a importância da doação de sangue. A plataforma serve como um canal informativo e, ao mesmo tempo, um espaço para a comunidade se engajar, visualizar dados em tempo real e compartilhar experiências.
 
+Além de sua causa social, este trabalho representa o **projeto final da disciplina de Desenvolvimento Web**, do Curso Técnico em Desenvolvimento de Sistemas. O seu principal objetivo acadêmico foi aplicar de forma prática e integrada os conhecimentos adquiridos em front-end (HTML, CSS), back-end (Python com Flask) e banco de dados (MySQL) para construir uma aplicação web completa, funcional e de relevância social.
+
 ### 📜 Sobre a Campanha
 
-O "Junho Vermelho" foi criado para reforçar a importância da doação de sangue, um gesto simples que pode salvar até quatro vidas. A campanha é intensificada em junho para celebrar o **Dia Mundial do Doador de Sangue** (14 de junho) e para ajudar a manter os estoques dos hemocentros em níveis seguros, especialmente durante o inverno, quando as doações tendem a diminuir.
+O "Junho Vermelho" foi criado para reforçar a importância da doação de sangue, um gesto simples que pode salvar até quatro vidas. A campanha é intensificada em junho para celebrar o **Dia Mundial do Doador de Sangue** (14 de junho) e para ajudar a manter os estoques dos hemocentros em níveis seguros, especialmente durante o inverno, quando as doações tendem a diminuir..
 
 ### ✨ Funcionalidades
 
